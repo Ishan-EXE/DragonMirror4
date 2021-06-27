@@ -37,7 +37,8 @@ def stats(update, context):
             f'<b>Downloaded:</b> {recv}\n\n' \
             f'<b>CPU 🖥️:</b> {cpuUsage}% ' \
             f'<b>RAM ⛏️:</b> {memory}% ' \
-            f'<b>Disk 🗄️:</b> {disk}%'
+            f'<b>Disk 🗄️:</b> {disk}%' \
+            f'<i>Join @IshanUpdates and @DragonMirror</i>'
     sendMessage(stats, context.bot, update)
 
 
