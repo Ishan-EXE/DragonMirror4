@@ -152,7 +152,13 @@ class MirrorListener(listeners.MirrorListeners):
 
     def onUploadComplete(self, link: str, size):
         with download_dict_lock:
-            msg = f'<b>Filename : </b><code>{download_dict[self.uid].name()}</code>\n<b>Size : </b><code>{size}</code>'
+            msg = f'<b>📂 Filename : </b><code>{download_dict[self.uid].name()}</code>\n<b>💾 Total Size : </b><code>{download_dict[self.uid].size()}</code>\n' \
+                  f' \n' \
+                  f'<b>📌Join our TeamDrive to get access to the GDrive Links.</b>\n' \
+                  f'<b>📍Donot share GDrive / Index Links outside the Group.</b>\n' \
+                  f' \n' \
+                  f'✨>b>Dragon Mirror Zone:- Join @DragonMirror\n' \
+                  f'<i>Powered by @IshanUpdates</i>\n'
             buttons = button_build.ButtonMaker()
             if SHORTENER is not None and SHORTENER_API is not None:
                 surl = requests.get(f'https://{SHORTENER}/api?api={SHORTENER_API}&url={link}&format=text').text
@@ -181,7 +187,7 @@ class MirrorListener(listeners.MirrorListeners):
             else:
                 uname = f'<a href="tg://user?id={self.message.from_user.id}">{self.message.from_user.first_name}</a>'
             if uname is not None:
-                msg += f'\n\nReq. By 👉 : {uname}'
+                msg += f'\n\n💫Requested By 👉 : {uname} #UploadedToDrive'
             try:
                 fs_utils.clean_download(download_dict[self.uid].path())
             except FileNotFoundError:
