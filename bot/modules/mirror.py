@@ -157,8 +157,9 @@ class MirrorListener(listeners.MirrorListeners):
                   f'<b>📌Join our TeamDrive to get access to the GDrive Links.</b>\n' \
                   f'<b>📍Donot share GDrive / Index Links outside the Group.</b>\n' \
                   f' \n' \
-                  f'✨>b>Dragon Mirror Zone:- Join @DragonMirror\n' \
-                  f'<i>Powered by @IshanUpdates</i>\n'
+                  f'✨<b>Dragon Mirror Zone:- Join @DragonMirror</b>\n' \
+                  f' \n' \
+                  f'💥<i>Powered by @IshanUpdates💥</i>\n'
             buttons = button_build.ButtonMaker()
             if SHORTENER is not None and SHORTENER_API is not None:
                 surl = requests.get(f'https://{SHORTENER}/api?api={SHORTENER_API}&url={link}&format=text').text
