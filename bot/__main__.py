@@ -44,12 +44,13 @@ def stats(update, context):
 
 def start(update, context):
     start_string = f'''
-<b>Hey {update.message.chat.first_name} I am a Mirror Bot which can Mirror Torrents/Direct Links/Mega (Buggy)/YT-DL links to Google Drive!</b>
+<b>Hey {update.message.chat.first_name} I am a Mirror Bot which can Mirror Torrents/Direct Links/Mega (Buggy)/ YT-DL links to Google Drive!</b>
 <b>Bot Made by @ IshanAvasthi. Join @IshanUpdates to use me.</b>
 <b>Mirror Group</b> :<b> @DragonMirror</b>
 <b>Leech Group</b> :<b> @DragonLeech</b>
 <b>Updates Channel</b> :<b> @IshanUpdates</b>
 <b>Support Group</b> :<b> @DragonBotsChat</b>
+
 <i>Credits: Many many awesome people</i>
 '''
     sendMessage(start_string, context.bot, update)
